@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nairobi Youth Engagement Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Nairobi Youth Engagement Dashboard</h1>
+  <p>Tracking youth programs and engagement across Nairobi</p>
+</header>
+
+<main>
+  <section id="programs">
+    <h2>Programs & Events</h2>
+    <div class="program-card" onclick="showDetails(0)">
+      <h3>Youth Coding Bootcamp</h3>
+      <p>Learn coding skills for free in Nairobi</p>
+    </div>
+    <div class="program-card" onclick="showDetails(1)">
+      <h3>Sports Outreach Initiative</h3>
+      <p>Community sports events to engage young people</p>
+    </div>
+    <div class="program-card" onclick="showDetails(2)">
+      <h3>Entrepreneurship Workshop</h3>
+      <p>Training youth in business and startups</p>
+    </div>
+  </section>
+
+  <section id="details" class="hidden">
+    <button onclick="closeDetails()">← Back to Programs</button>
+    <h2 id="detail-title"></h2>
+    <p id="detail-desc"></p>
+  </section>
+
+  <section id="feedback">
+    <h2>Send Feedback</h2>
+    <form id="feedback-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <textarea id="comment" placeholder="Your Comment" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="feedback-output"></div>
+  </section>
+
+  <section id="map">
+    <h2>Event Locations</h2>
+    <img src="nairobi-map.png" alt="Map of Nairobi youth program locations">
+    <p>Markers show locations of youth programs in Nairobi</p>
+  </section>
+</main>
+
+<footer>
+  <p>Demo Dashboard &copy; 2025</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
